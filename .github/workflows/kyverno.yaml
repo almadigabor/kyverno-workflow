@@ -20,6 +20,11 @@
 name: Test Kyverno Policies
 
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'charts/**'
   workflow_dispatch:
 
 jobs:
