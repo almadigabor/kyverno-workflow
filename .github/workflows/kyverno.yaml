@@ -67,6 +67,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - uses: actions/checkout@v2
+        name: Checkout kyverno-policies
+        with:
+          repository: kyverno/policies
+          ref: main
+          path: kyverno-policies
+
       - name: Install Helm
         uses: azure/setup-helm@v1
 
